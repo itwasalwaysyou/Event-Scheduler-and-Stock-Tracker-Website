@@ -33,4 +33,4 @@ the Stock page displayed stock data obtained from an external API.
 
 ![image](https://user-images.githubusercontent.com/112202949/235238552-e1ddd30a-8685-4525-b9c8-6114683d2c08.png)
 
-![image](https://user-images.githubusercontent.com/112202949/235238611-343f02e8-875a-468d-98db-a63d560b7644.png)
+![image](https://user-images.githubusercontent.com/112202949/235240703-af5d5c93-de96-429a-a58c-2a63b8420113.png)
