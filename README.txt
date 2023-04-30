@@ -1,2 +1,0 @@
-username: charlie
-password: tango
