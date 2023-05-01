@@ -28,6 +28,13 @@ It allows for quick importing of schedule events from a JSON file.
 
 ![image](https://user-images.githubusercontent.com/112202949/235238478-d4bee599-26fc-4f84-943c-3846407e075e.png)
 
+
+## Edit / Delete Event from client (The database was updated )
+![Screenshot from 2023-05-01 01-20-41](https://user-images.githubusercontent.com/112202949/235416116-18a14ec1-5038-42d0-9a7c-021c50f3c606.png)
+![Screenshot from 2023-05-01 01-22-08](https://user-images.githubusercontent.com/112202949/235416212-65d0df63-32ff-4846-9367-c53c6be03c50.png)
+![Screenshot from 2023-05-01 01-22-19](https://user-images.githubusercontent.com/112202949/235416215-f93fa288-45be-4baf-97b2-d01c17fe7eed.png)
+
+
 ## Stock page:
 the Stock page displayed stock data obtained from an external API.
 
