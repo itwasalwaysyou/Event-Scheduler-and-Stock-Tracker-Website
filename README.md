@@ -66,7 +66,10 @@ The event `CSCI 4131 Lecture` has been deleted from database successfully:)
 
 Let's edit the event `New Event`(for testing)!   
 ![Screenshot from 2023-05-03 21-09-57](https://user-images.githubusercontent.com/112202949/236096262-7710c049-1825-455b-ade9-f1f528782aee.png)
-Surprise! the form should be prepopulated with the current values of the schedule, so that the user can make changes to the event and see what the original values were before changing them!
+Surprise! the form should be prepopulated with the current values of the schedule, so that the user can make changes to the event and see what the original values were before changing them!!
+[Screenshot from 2023-05-03 22-04-37](https://user-images.githubusercontent.com/112202949/236104242-01e30382-ef56-4550-884d-986866405c7c.png)
+edit it...
+
 ![Screenshot from 2023-05-03 21-12-16](https://user-images.githubusercontent.com/112202949/236096270-d64219ec-b607-459f-b9ca-ae586218d78c.png)
 Successful! 
 ![Screenshot from 2023-05-03 21-12-23](https://user-images.githubusercontent.com/112202949/236096272-efb8fab6-d6f0-42a3-9cdf-6fb9e167401d.png)
