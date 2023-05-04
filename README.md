@@ -1,5 +1,5 @@
 # Event-Scheduler-and-Stock-Tracker-Website
-Full Stack Project:creating a website that included login functionality and five pages (`Welcome`,`Create Account`,`Login`, `Schedule`, and `Add Event`), as well as a `Stock page` that displayed stock data obtained from an `external API`.
+`Full Stack` Project:creating a website that included login functionality and five pages (`Welcome`,`Create Account`,`Login`, `Schedule`, and `Add Event`), as well as a `Stock page` that displayed stock data obtained from an `external API`.
 
 To efficiently manage user accounts and event information, I designed and implemented a database system using `SQL`.This database system enabled efficient storage and retrieval of data, allowing for seamless management of user accounts and event information.
 
