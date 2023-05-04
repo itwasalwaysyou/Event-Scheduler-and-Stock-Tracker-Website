@@ -49,7 +49,7 @@ It seems that the events file I provided has been added to the database successf
 ![Screenshot from 2023-05-03 21-01-20](https://user-images.githubusercontent.com/112202949/236094619-f665cf78-1225-4091-9a43-ffd58ac09324.png)
 
 
-## Delete Event from client :
+## Delete Event from Database :
 
 When a user hovers over a row with an event on it, the Delete/Edit button should be shown inside the row.
 
@@ -62,7 +62,7 @@ The event `CSCI 4131 Lecture` has been deleted from database successfully:)
 ![Screenshot from 2023-05-03 21-03-13](https://user-images.githubusercontent.com/112202949/236095083-fe13cd31-c734-4092-ab40-5b375e15ab93.png)
 
 
-## Edit Event from client :
+## Edit Event from Database :
 
 Let's edit the event `New Event`(for testing)!   
 ![Screenshot from 2023-05-03 21-09-57](https://user-images.githubusercontent.com/112202949/236096262-7710c049-1825-455b-ade9-f1f528782aee.png)
