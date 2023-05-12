@@ -1,0 +1,52 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  title Account Management
+nav.navbar.navbar-expanded.navbar-light.bg-light
+  ul.nav.nav-pills
+    li.nav-item.active
+      a.nav-link.active Create Account
+    li.nav-item
+      a.nav-link(href='/logout')
+        i.fa.fa-sign-out(style='font-size:24px;color:rgba(38, 117, 235, 0.747)')
+br
+br
+.container.mb-5
+  form#createAccount(name='createAccount' method='post' action='/createAccount')
+    #error.alert.alert-danger(role='alert', style=`display: ${message ? "block" : "none"}`) #{message}
+    .form-group
+      label(for='name') User Name:
+      input#name.form-control(type='text' name='name' required='')
+    .form-group
+      label(for='email') Email:
+      input#email.form-control(type='email' name='email' required='')
+    .form-group
+      label(for='password') Password
+      input#password.form-control(type='password' name='password' required='')
+    .form-group
+      label(for='password-confirm') Password Confirm
+      input#password-confirm.form-control(type='password' name='password-confirm' required='')
+    button#submit.btn.btn-block.btn-primary(type='submit') Create
+script.
+  var form= document.getElementById("createAccount");
+  var password= document.getElementById("password");
+  var password_confirm = document.getElementById("password-confirm");
+  form.addEventListener('submit',(event)=>{
+  if(password.value!=password_confirm.value){
+  //submit not happend then:
+  event.preventDefault();
+  alert("Passwords do NOT match");
+  }
+  })
+  const message = "{{message}}";
+  const errorObj = document.getElementById("error");
+  if (errorMessage) {
+  errorObj.textContent = message;
+  errorObj.style.display = "block";
+  }

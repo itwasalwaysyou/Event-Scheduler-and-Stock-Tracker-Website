@@ -1,0 +1,60 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  title stock page
+  style.
+    #container1 {
+    float: left;
+    width:200px;
+    }
+    #container2 {
+    float:right;
+    width:50%;
+    }
+nav.navbar.navbar-expanded.navbar-light.bg-light.mb-5
+  ul.nav.nav-pills
+    li.nav-item
+      a.nav-link(href='/') Home
+    li.nav-item
+      a.nav-link(href='/schedule') Schedule
+    li.nav-item
+      a.nav-link(href='/addEvent')
+        | Add
+        | Event
+    li.nav-item.active
+      a.nav-link.active(href='/stock') Stcok Page
+    li.nav-item
+      a.nav-link(href='/logout')
+        i.fa.fa-sign-out(style='font-size:24px;color:rgba(38, 117, 235, 0.747)')
+.container.mb-5(style='text-align: center;')
+  .alert.alert-secondary(role='alert')
+    | welcome to Stock page
+.container.mb-5
+  table.table.table-striped
+    tr
+      td Company
+      td
+        select#company(name='company' ,='')
+          option(value='AAPL' selected='') Apple
+          option(value='MSFT') Microsoft
+          option(value='TWTR') Twitter
+          option(value='AMZN') Amazon
+    tr
+      td
+        button#submit.btn.btn-block.btn-primary(type='submit' onclick='getStockData()') Get Data
+.container.mb-5
+  table.table.table-striped
+    tr
+      td Company-MetaData
+      td Stock-Info
+    tr
+      td
+        #container1
+      td
+        #container2

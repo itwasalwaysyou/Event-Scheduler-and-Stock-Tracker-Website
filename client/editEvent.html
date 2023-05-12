@@ -1,0 +1,155 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <title>Add Event</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expanded navbar-light bg-light mb-5">
+      <ul class="nav nav-pills">
+
+        <li class="nav-item active">
+                <a class="nav-link active">Edit Event</a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link" href="/logout"><i class="fa fa-sign-out" style="font-size:24px;color:rgba(38, 117, 235, 0.747)"></i>
+                </a>
+        </li>
+      
+       </ul>
+    </nav>
+
+
+
+    <div class="container mb-5">
+    <form name="addEvent" method="post" action="/editEvent"
+            id="addEvent">
+        <input type="hidden" id="eventID" name="eventID" value="">
+        <div class="form-group">
+        <label for="nameInput">Event</label>
+        <input type="text" id="nameInput" class="form-control" name="event"
+                pattern="[a-zA-Z0-9\s]+" title="Event must be alphanumeric"
+                required="">
+        <small id="eventHelp" class="form-text text-muted">
+            Event name must be alphanumeric</small>
+        </div>
+        <div class="form-group">
+        <label for="dayInput">Day of Week</label>
+        <select id="dayInput" class="form-control" name="day">
+            <option value ="sunday">
+            Sunday
+            </option>
+            <option value ="monday">
+            Monday
+            </option>
+            <option value ="tuesday">
+            Tuesday
+            </option>
+            <option value ="wednesday">
+            Wednesday
+            </option>
+            <option value ="thursday">
+            Thursday
+            </option>
+            <option value ="friday">
+            Friday
+            </option>
+            <option value ="saturday">
+            Saturday
+            </option>
+        </select>
+        </div>
+        <div class="form-group">
+        <label for="startTimeInput">Start</label>
+        <input id="startTimeInput" type="time" class="form-control"
+                name="start" required="">
+        </div>
+        <div class="form-group">
+        <label for="endTimeInput">End</label>
+        <input id="endTimeInput" type="time" class="form-control"
+                name="end" required="">
+        </div>
+        <div class="form-group">
+        <label for="phoneInput">Phone</label>
+        <input id="phoneInput" type="text" class="form-control" name="phone"
+                required="">
+        </div>
+
+        <div class="form-group">
+          <label for="locationInput">Location</label>
+          <input id="locationInput" type="text" class="form-control" name="location"
+                  required="">
+        </div>
+
+        <div class="form-group">
+        <label for="extraInput">Extra Info</label>
+        <input id="extraInput" type="text" class="form-control" name="info"
+                required="">
+        </div>
+        <div class="form-group">
+        <label for="urlInput">Enter URL for the Extra Info</label>
+        <input id="urlInput" type="url" class="form-control" name="url"
+                required="">
+        </div>
+        <button type="submit" class="btn btn-block btn-primary">Submit</button>
+        
+    </form>
+    </div>
+
+    <script>
+      let curr_eventInfo = localStorage.getItem("curr_eventInfo");
+      
+
+      //String => JSON Object [Array[0]]
+      let currInfo = JSON.parse(curr_eventInfo);
+      currInfo = currInfo[0];
+
+      var eventID = document.getElementById("eventID");
+      eventID.value=currInfo.event_id;
+
+
+
+
+      var event = document.getElementById("nameInput");
+      var location1 = document.getElementById("locationInput");
+      var phone = document.getElementById("phoneInput");
+      var info = document.getElementById("extraInput");
+      var url = document.getElementById("urlInput");
+      var day =document.getElementById("dayInput");
+      var start = document.getElementById("startTimeInput");
+      var end = document.getElementById("endTimeInput");
+
+      event.value = currInfo.event_event;     
+      phone.value= currInfo.event_phone;
+      info.value = currInfo.event_info;
+      url.value = currInfo.event_url;
+      day.value = currInfo.event_day;
+      start.value = currInfo.event_start;
+      end.value = currInfo.event_end;
+      location1.value =currInfo.event_location;
+
+
+
+
+    </script>
+
+
+  </body>
+</html>
+
